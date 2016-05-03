@@ -270,15 +270,12 @@ namespace Hangman
             temp = data.getWord((int)numericUpDown1.Value);
             orginal = temp.ToCharArray();
             crticki = s.ToCharArray();
-            textBox1.Text = temp;
-
-
+          
         }
       
         private void vpisiBukva(char c)
         {
-           
-          
+            bool flag = false;
             for (int i = 0; i < (int)numericUpDown1.Value; i++)
             {
                 c = Char.ToLower(c);
@@ -286,13 +283,12 @@ namespace Hangman
                 {
                     crticki[i] = c;
                     trueLetters++;
-                    textBox2.Text = Convert.ToString(trueLetters);
-                    scorePlayer += 10;
-                    textBox3.Text = Convert.ToString(scorePlayer);
+                   scorePlayer += 10;
+                    flag = true;
+                    
+                   
                 }
-                else {
-                    falseLetters++;
-                }
+                
 
                 if (trueLetters == (int)numericUpDown1.Value) {
 
@@ -301,12 +297,48 @@ namespace Hangman
                     break;
 
                 }
-                else if(falseLetters==maxFalseLetters){
-
-                }
                 
+                
+
             }
-           
+            if (!flag)
+                falseLetters++;
+
+            if (falseLetters == 1)
+            {
+                pictureBox2.Visible = false;
+                pictureBox3.Visible = true;
+            }
+            else if (falseLetters == 2)
+            {
+                pictureBox3.Visible = false;
+                pictureBox4.Visible = true;
+            }
+            else if (falseLetters == 3)
+            {
+                pictureBox4.Visible = false;
+                pictureBox5.Visible = true;
+            }
+            else if (falseLetters == 4)
+            {
+                pictureBox5.Visible = false;
+                pictureBox6.Visible = true;
+            }
+            else if (falseLetters == 5)
+            {
+                pictureBox6.Visible = false;
+                pictureBox7.Visible = true;
+            }
+            else if (falseLetters == 6)
+            {
+                pictureBox7.Visible = false;
+                pictureBox8.Visible = true;
+                GameOver gm = new GameOver();
+                gm.Show();
+                this.Close();
+
+            }
+
             s = "";
             for (int j = 0; j < crticki.Length; j++)
             {
@@ -335,8 +367,7 @@ namespace Hangman
                     crticki[j] = pom[j];
                     trueLetters++;
                     scorePlayer -= 10;
-                    textBox3.Text = Convert.ToString(scorePlayer);
-                    same = pom[j];
+                     same = pom[j];
                     done = true;
                     m = j;                  
                 }
@@ -345,7 +376,7 @@ namespace Hangman
                     s += pom[j];
                     crticki[j] = same;
                     trueLetters++;                    
-                    textBox3.Text = Convert.ToString(scorePlayer);
+                    
                 }
                 else
                 {
@@ -353,7 +384,9 @@ namespace Hangman
 
                 }
                 label3.Text = s;
+               
             }
+
             if (trueLetters == (int)numericUpDown1.Value)
             {
 
@@ -364,6 +397,41 @@ namespace Hangman
             }
             button27.Enabled = false;
 
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -7,19 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Media;
 namespace Hangman
 {
     public partial class Form1 : Form
     {
         public bool home = true;
-      
+        public SoundPlayer my_sound;
+        public bool sound;
         public Form1()
         {
             InitializeComponent();
             DoubleBuffered = true;
-
-
+            
+            my_sound= new SoundPlayer(@"../../Resources/music.wav"); 
+            my_sound.Play();
+            sound = true;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -85,13 +88,12 @@ namespace Hangman
         public void open(string text)
         {
             Igraj play = new Igraj(text);
-            play.Show();
-            
-                this.Hide();
-
+            play.Show();        
+            this.Hide();
+           
 
         }
-
+      
         private void button4_Click(object sender, EventArgs e)
         {
             open(button4.Text);
@@ -112,6 +114,18 @@ namespace Hangman
 
         }
 
-       
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            
+            if (sound)
+            {
+                my_sound.Stop();
+                sound = false;
+            }
+            else {
+                my_sound.Play();
+                sound = true;
+            }
+        }
     }
 }

@@ -1,65 +1,11 @@
-c:\users\marina\documents\visual studio 2015\Projects\Hangman\Hangman\bin\Debug\Hangman.exe.config
-c:\users\marina\documents\visual studio 2015\Projects\Hangman\Hangman\bin\Debug\Hangman.exe
-c:\users\marina\documents\visual studio 2015\Projects\Hangman\Hangman\bin\Debug\Hangman.pdb
-c:\users\marina\documents\visual studio 2015\Projects\Hangman\Hangman\obj\Debug\Hangman.csprojResolveAssemblyReference.cache
-c:\users\marina\documents\visual studio 2015\Projects\Hangman\Hangman\obj\Debug\Hangman.Form1.resources
-c:\users\marina\documents\visual studio 2015\Projects\Hangman\Hangman\obj\Debug\Hangman.Properties.Resources.resources
-c:\users\marina\documents\visual studio 2015\Projects\Hangman\Hangman\obj\Debug\Hangman.csproj.GenerateResource.Cache
-c:\users\marina\documents\visual studio 2015\Projects\Hangman\Hangman\obj\Debug\Hangman.exe
-c:\users\marina\documents\visual studio 2015\Projects\Hangman\Hangman\obj\Debug\Hangman.pdb
-c:\users\marina\documents\visual studio 2015\Projects\Hangman\Hangman\obj\Debug\Hangman.Igraj.resources
-C:\Users\Jona Dimovska\Desktop\HangMan\Hangman\bin\Debug\Hangman.exe.config
-C:\Users\Jona Dimovska\Desktop\HangMan\Hangman\obj\Debug\Hangman.exe
-C:\Users\Jona Dimovska\Desktop\HangMan\Hangman\obj\Debug\Hangman.pdb
-C:\Users\Jona Dimovska\Desktop\HangMan\Hangman\bin\Debug\Hangman.exe
-C:\Users\Jona Dimovska\Desktop\HangMan\Hangman\bin\Debug\Hangman.pdb
-C:\Users\Jona Dimovska\Desktop\HangMan\Hangman\obj\Debug\Hangman.csprojResolveAssemblyReference.cache
-C:\Users\Jona Dimovska\Desktop\HangMan\Hangman\obj\Debug\Hangman.Form1.resources
-C:\Users\Jona Dimovska\Desktop\HangMan\Hangman\obj\Debug\Hangman.Igraj.resources
-C:\Users\Jona Dimovska\Desktop\HangMan\Hangman\obj\Debug\Hangman.Properties.Resources.resources
-C:\Users\Jona Dimovska\Desktop\HangMan\Hangman\obj\Debug\Hangman.csproj.GenerateResource.Cache
-C:\Users\Marina\Desktop\Hangman\bin\Debug\Hangman.exe.config
-C:\Users\Marina\Desktop\Hangman\obj\Debug\Hangman.exe
-C:\Users\Marina\Desktop\Hangman\obj\Debug\Hangman.pdb
-C:\Users\Marina\Desktop\Hangman\bin\Debug\Hangman.exe
-C:\Users\Marina\Desktop\Hangman\bin\Debug\Hangman.pdb
-C:\Users\Marina\Desktop\Hangman\obj\Debug\Hangman.csprojResolveAssemblyReference.cache
-C:\Users\Marina\Desktop\Hangman\obj\Debug\Hangman.Form1.resources
-C:\Users\Marina\Desktop\Hangman\obj\Debug\Hangman.Igraj.resources
-C:\Users\Marina\Desktop\Hangman\obj\Debug\Hangman.Properties.Resources.resources
-C:\Users\Marina\Desktop\Hangman\obj\Debug\Hangman.csproj.GenerateResource.Cache
-<<<<<<< HEAD
-C:\Users\Jona Dimovska\Desktop\HangMan-VP\Hangman\bin\Debug\Hangman.exe.config
-C:\Users\Jona Dimovska\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.exe
-C:\Users\Jona Dimovska\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.pdb
-C:\Users\Jona Dimovska\Desktop\HangMan-VP\Hangman\bin\Debug\Hangman.exe
-C:\Users\Jona Dimovska\Desktop\HangMan-VP\Hangman\bin\Debug\Hangman.pdb
-C:\Users\Jona Dimovska\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.csprojResolveAssemblyReference.cache
-C:\Users\Jona Dimovska\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.Form1.resources
-C:\Users\Jona Dimovska\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.Igraj.resources
-C:\Users\Jona Dimovska\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.Properties.Resources.resources
-C:\Users\Jona Dimovska\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.csproj.GenerateResource.Cache
-C:\Users\Jona Dimovska\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.HighScore.resources
-C:\Users\Jona Dimovska\Desktop\finla\HangMan-VP\Hangman\bin\Debug\Hangman.exe.config
-C:\Users\Jona Dimovska\Desktop\finla\HangMan-VP\Hangman\obj\Debug\Hangman.exe
-C:\Users\Jona Dimovska\Desktop\finla\HangMan-VP\Hangman\obj\Debug\Hangman.pdb
-C:\Users\Jona Dimovska\Desktop\finla\HangMan-VP\Hangman\bin\Debug\Hangman.exe
-C:\Users\Jona Dimovska\Desktop\finla\HangMan-VP\Hangman\bin\Debug\Hangman.pdb
-C:\Users\Jona Dimovska\Desktop\finla\HangMan-VP\Hangman\obj\Debug\Hangman.csprojResolveAssemblyReference.cache
-C:\Users\Jona Dimovska\Desktop\finla\HangMan-VP\Hangman\obj\Debug\Hangman.Form1.resources
-C:\Users\Jona Dimovska\Desktop\finla\HangMan-VP\Hangman\obj\Debug\Hangman.HighScore.resources
-C:\Users\Jona Dimovska\Desktop\finla\HangMan-VP\Hangman\obj\Debug\Hangman.Igraj.resources
-C:\Users\Jona Dimovska\Desktop\finla\HangMan-VP\Hangman\obj\Debug\Hangman.Properties.Resources.resources
-C:\Users\Jona Dimovska\Desktop\finla\HangMan-VP\Hangman\obj\Debug\Hangman.csproj.GenerateResource.Cache
-=======
-C:\Users\Filip Stanojkovski\Desktop\HangMan-VP\Hangman\bin\Debug\Hangman.exe.config
-C:\Users\Filip Stanojkovski\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.exe
-C:\Users\Filip Stanojkovski\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.pdb
-C:\Users\Filip Stanojkovski\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.csprojResolveAssemblyReference.cache
-C:\Users\Filip Stanojkovski\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.Form1.resources
-C:\Users\Filip Stanojkovski\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.Igraj.resources
-C:\Users\Filip Stanojkovski\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.Properties.Resources.resources
-C:\Users\Filip Stanojkovski\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.csproj.GenerateResource.Cache
-C:\Users\Filip Stanojkovski\Desktop\HangMan-VP\Hangman\bin\Debug\Hangman.exe
-C:\Users\Filip Stanojkovski\Desktop\HangMan-VP\Hangman\bin\Debug\Hangman.pdb
->>>>>>> 6c6877b727e1d308490508a2bdbaa9fd77c3c1c1
+C:\Users\Marina\Desktop\HangMan-VP\Hangman\bin\Debug\Hangman.exe.config
+C:\Users\Marina\Desktop\HangMan-VP\Hangman\bin\Debug\Hangman.exe
+C:\Users\Marina\Desktop\HangMan-VP\Hangman\bin\Debug\Hangman.pdb
+C:\Users\Marina\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.Form1.resources
+C:\Users\Marina\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.GameOver.resources
+C:\Users\Marina\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.HighScore.resources
+C:\Users\Marina\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.Igraj.resources
+C:\Users\Marina\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.Properties.Resources.resources
+C:\Users\Marina\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.csproj.GenerateResource.Cache
+C:\Users\Marina\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.exe
+C:\Users\Marina\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.pdb
