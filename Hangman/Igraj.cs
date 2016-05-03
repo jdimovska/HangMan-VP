@@ -12,10 +12,17 @@ namespace Hangman
 {
     public partial class Igraj : Form
     {
+        int trueLetters = 0;
+        int falseLetters = 0;
+        int maxFalseLetters = 6;
+        int scorePlayer = 0;
+        Boolean flag1 = false;
         string category;
         string s;
         string temp;
         string st = "";
+        char[] orginal;
+        char[] crticki;
         public Igraj(string category)
         {
             InitializeComponent();
@@ -261,25 +268,45 @@ namespace Hangman
 
             Data data = new Data(category);
             temp = data.getWord((int)numericUpDown1.Value);
-
+            orginal = temp.ToCharArray();
+            crticki = s.ToCharArray();
             textBox1.Text = temp;
 
 
         }
+      
         private void vpisiBukva(char c)
         {
-            
-            char[] orginal = temp.ToCharArray();
-            char[] crticki = s.ToCharArray();
+           
+          
             for (int i = 0; i < (int)numericUpDown1.Value; i++)
             {
                 c = Char.ToLower(c);
                 if (c == orginal[i])
                 {
                     crticki[i] = c;
+                    trueLetters++;
+                    textBox2.Text = Convert.ToString(trueLetters);
+                    scorePlayer += 10;
+                    textBox3.Text = Convert.ToString(scorePlayer);
+                }
+                else {
+                    falseLetters++;
+                }
+
+                if (trueLetters == (int)numericUpDown1.Value) {
+
+                    HighScore score = new HighScore(scorePlayer);
+                    score.Show();
+                    break;
+
+                }
+                else if(falseLetters==maxFalseLetters){
+
                 }
                 
             }
+           
             s = "";
             for (int j = 0; j < crticki.Length; j++)
             {
@@ -290,6 +317,53 @@ namespace Hangman
         private void label3_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void button27_Click_1(object sender, EventArgs e)
+        {
+            s = "";
+           
+            
+            char same =' ';
+            Boolean done = false;
+            char []pom = temp.ToCharArray();
+            int m = 0;
+            for (int j = 0; j < crticki.Length; j++)
+            {
+                if (crticki[j] == '_' &&  done==false) {
+                    s += pom[j];
+                    crticki[j] = pom[j];
+                    trueLetters++;
+                    scorePlayer -= 10;
+                    textBox3.Text = Convert.ToString(scorePlayer);
+                    same = pom[j];
+                    done = true;
+                    m = j;                  
+                }
+               
+                else if (pom[j] == same && m!=j) {
+                    s += pom[j];
+                    crticki[j] = same;
+                    trueLetters++;                    
+                    textBox3.Text = Convert.ToString(scorePlayer);
+                }
+                else
+                {
+                    s += crticki[j];
+
+                }
+                label3.Text = s;
+            }
+            if (trueLetters == (int)numericUpDown1.Value)
+            {
+
+                HighScore score = new HighScore(scorePlayer);
+                score.Show();
+                
+
+            }
+            button27.Enabled = false;
+
         }
     }
 }
