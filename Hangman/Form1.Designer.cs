@@ -122,11 +122,11 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Snow;
-<<<<<<< HEAD
+
             this.label2.Location = new System.Drawing.Point(19, 132);
-=======
+
             this.label2.Location = new System.Drawing.Point(3, 225);
->>>>>>> 8253f6be33a59addf51e11fbd00fc58e97349c3a
+
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(603, 192);
             this.label2.TabIndex = 9;
@@ -154,10 +154,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(631, 356);
-<<<<<<< HEAD
+
             this.Controls.Add(this.pictureBox9);
-=======
->>>>>>> 8253f6be33a59addf51e11fbd00fc58e97349c3a
+
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);

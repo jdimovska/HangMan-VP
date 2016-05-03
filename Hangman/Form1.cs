@@ -93,16 +93,7 @@ namespace Hangman
            
 
         }
-<<<<<<< HEAD
       
-=======
-        public void res(int i)
-        {
-            if (i == 1)
-                this.Show();
-        }
-
->>>>>>> 8253f6be33a59addf51e11fbd00fc58e97349c3a
         private void button4_Click(object sender, EventArgs e)
         {
             open(button4.Text);
@@ -130,6 +121,7 @@ namespace Hangman
             {
                 my_sound.Stop();
                 sound = false;
+
             }
             else {
                 my_sound.Play();
