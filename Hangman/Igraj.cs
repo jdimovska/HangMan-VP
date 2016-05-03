@@ -392,6 +392,7 @@ namespace Hangman
 
                 HighScore score = new HighScore(scorePlayer);
                 score.Show();
+                this.Close();
                 
 
             }
