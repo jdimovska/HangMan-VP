@@ -58,6 +58,7 @@ namespace Hangman
             Form1 home = new Form1();
             int i = 1;
             home.res(i);
+           
             
         }
     }

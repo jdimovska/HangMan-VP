@@ -113,6 +113,11 @@ namespace Hangman
             open(button6.Text);
 
         }
+        public void res(int i)
+        {
+            if (i == 1)
+                this.Show();
+        }
 
         private void pictureBox9_Click(object sender, EventArgs e)
         {
