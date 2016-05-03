@@ -28,6 +28,7 @@ C:\Users\Marina\Desktop\Hangman\obj\Debug\Hangman.Form1.resources
 C:\Users\Marina\Desktop\Hangman\obj\Debug\Hangman.Igraj.resources
 C:\Users\Marina\Desktop\Hangman\obj\Debug\Hangman.Properties.Resources.resources
 C:\Users\Marina\Desktop\Hangman\obj\Debug\Hangman.csproj.GenerateResource.Cache
+<<<<<<< HEAD
 C:\Users\Jona Dimovska\Desktop\HangMan-VP\Hangman\bin\Debug\Hangman.exe.config
 C:\Users\Jona Dimovska\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.exe
 C:\Users\Jona Dimovska\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.pdb
@@ -50,3 +51,15 @@ C:\Users\Jona Dimovska\Desktop\finla\HangMan-VP\Hangman\obj\Debug\Hangman.HighSc
 C:\Users\Jona Dimovska\Desktop\finla\HangMan-VP\Hangman\obj\Debug\Hangman.Igraj.resources
 C:\Users\Jona Dimovska\Desktop\finla\HangMan-VP\Hangman\obj\Debug\Hangman.Properties.Resources.resources
 C:\Users\Jona Dimovska\Desktop\finla\HangMan-VP\Hangman\obj\Debug\Hangman.csproj.GenerateResource.Cache
+=======
+C:\Users\Filip Stanojkovski\Desktop\HangMan-VP\Hangman\bin\Debug\Hangman.exe.config
+C:\Users\Filip Stanojkovski\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.exe
+C:\Users\Filip Stanojkovski\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.pdb
+C:\Users\Filip Stanojkovski\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.csprojResolveAssemblyReference.cache
+C:\Users\Filip Stanojkovski\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.Form1.resources
+C:\Users\Filip Stanojkovski\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.Igraj.resources
+C:\Users\Filip Stanojkovski\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.Properties.Resources.resources
+C:\Users\Filip Stanojkovski\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.csproj.GenerateResource.Cache
+C:\Users\Filip Stanojkovski\Desktop\HangMan-VP\Hangman\bin\Debug\Hangman.exe
+C:\Users\Filip Stanojkovski\Desktop\HangMan-VP\Hangman\bin\Debug\Hangman.pdb
+>>>>>>> 6c6877b727e1d308490508a2bdbaa9fd77c3c1c1
