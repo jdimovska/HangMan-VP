@@ -16,19 +16,30 @@ namespace Hangman
 
         public Data(string category)
         {
+            encDecr e = new encDecr();
             this.category = category;
             string path = "";
             if (category.Equals("Animals"))
             {
+                string inp = @"../../Resources/animalsenc.txt";
                 path = @"../../Resources/animals.txt";
+                e.DecryptFile(inp, path);
+                //File.Delete(inp);
+
             }
             else if (category.Equals("Capital"))
             {
+                string inp = @"../../Resources/citiesenc.txt";
                 path = @"../../Resources/cities.txt";
+                e.DecryptFile(inp, path);
+                //File.Delete(inp);
             }
             else if (category.Equals("Finki"))
             {
+                string inp = @"../../Resources/finkienc.txt";
                 path = @"../../Resources/finki.txt";
+                e.DecryptFile(inp, path);
+                //File.Delete(inp);
             }
 
             StreamReader file;
@@ -49,6 +60,30 @@ namespace Hangman
                     finki.Add(lines);
                 }
 
+            }
+            if (category.Equals("Animals"))
+            {
+                string inp = @"../../Resources/animals.txt";
+                //path = @"../../Resources/animalsenc.txt";
+                //e.EncryptFile(inp, path);
+                file.Close();
+                File.Delete(inp);
+            }
+            else if (category.Equals("Capital"))
+            {
+                string inp = @"../../Resources/cities.txt";
+                //path = @"../../Resources/citiesenc.txt";
+                //e.EncryptFile(inp, path);
+                file.Close();
+                File.Delete(inp);
+            }
+            else if (category.Equals("Finki"))
+            {
+                string inp = @"../../Resources/finki.txt";
+                //path = @"../../Resources/finkienc.txt";
+                //e.EncryptFile(inp, path);
+                file.Close();
+                File.Delete(inp);
             }
         }
         public string getWord(int value)
