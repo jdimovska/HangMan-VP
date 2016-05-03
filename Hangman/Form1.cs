@@ -91,6 +91,11 @@ namespace Hangman
 
 
         }
+        public void res(int i)
+        {
+            if (i == 1)
+                this.Show();
+        }
 
         private void button4_Click(object sender, EventArgs e)
         {
