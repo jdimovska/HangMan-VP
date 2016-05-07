@@ -27,14 +27,14 @@ namespace Hangman
                 //File.Delete(inp);
 
             }
-            else if (category.Equals("Capital"))
+            else if (category.Equals("Capital cities"))
             {
                 string inp = @"../../Resources/citiesenc.txt";
                 path = @"../../Resources/cities.txt";
                 e.DecryptFile(inp, path);
                 //File.Delete(inp);
             }
-            else if (category.Equals("Finki"))
+            else if (category.Equals("FINKI"))
             {
                 string inp = @"../../Resources/finkienc.txt";
                 path = @"../../Resources/finki.txt";
@@ -51,11 +51,11 @@ namespace Hangman
                 {
                     animals.Add(lines);
                 }
-                else if (category.Equals("Capital"))
+                else if (category.Equals("Capital cities"))
                 {
                     cities.Add(lines);
                 }
-                else if (category.Equals("Finki"))
+                else if (category.Equals("FINKI"))
                 {
                     finki.Add(lines);
                 }
@@ -69,7 +69,7 @@ namespace Hangman
                 file.Close();
                 File.Delete(inp);
             }
-            else if (category.Equals("Capital"))
+            else if (category.Equals("Capital cities"))
             {
                 string inp = @"../../Resources/cities.txt";
                 //path = @"../../Resources/citiesenc.txt";
@@ -77,7 +77,7 @@ namespace Hangman
                 file.Close();
                 File.Delete(inp);
             }
-            else if (category.Equals("Finki"))
+            else if (category.Equals("FINKI"))
             {
                 string inp = @"../../Resources/finki.txt";
                 //path = @"../../Resources/finkienc.txt";
@@ -95,11 +95,11 @@ namespace Hangman
                 lista = animals;
 
             }
-            else if (category.Equals("Capital"))
+            else if (category.Equals("Capital cities"))
             {
                 lista = cities;
             }
-            else if (category.Equals("Finki"))
+            else if (category.Equals("FINKI"))
             {
                 lista = finki;
             }

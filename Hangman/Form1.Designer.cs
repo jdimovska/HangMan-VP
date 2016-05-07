@@ -44,7 +44,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(271, 144);
+            this.button1.Location = new System.Drawing.Point(249, 144);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 35);
             this.button1.TabIndex = 0;
@@ -54,7 +54,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(271, 185);
+            this.button2.Location = new System.Drawing.Point(249, 185);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(121, 34);
             this.button2.TabIndex = 1;
@@ -64,7 +64,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(271, 225);
+            this.button3.Location = new System.Drawing.Point(249, 226);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(121, 34);
             this.button3.TabIndex = 2;
@@ -85,29 +85,29 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(111, 144);
+            this.button4.Location = new System.Drawing.Point(249, 144);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(121, 35);
             this.button4.TabIndex = 4;
-            this.button4.Text = "Finki";
+            this.button4.Text = "FINKI";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Visible = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(111, 184);
+            this.button5.Location = new System.Drawing.Point(249, 184);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(121, 35);
             this.button5.TabIndex = 5;
-            this.button5.Text = "Capital";
+            this.button5.Text = "Capital cities";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Visible = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(111, 225);
+            this.button6.Location = new System.Drawing.Point(249, 226);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(121, 35);
             this.button6.TabIndex = 6;
@@ -122,11 +122,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Snow;
-
-            this.label2.Location = new System.Drawing.Point(19, 132);
-
-            this.label2.Location = new System.Drawing.Point(3, 225);
-
+            this.label2.Location = new System.Drawing.Point(16, 124);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(603, 192);
             this.label2.TabIndex = 9;
@@ -154,9 +150,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(631, 356);
-
             this.Controls.Add(this.pictureBox9);
-
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -168,6 +162,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "Form1";
             this.Text = "The hangman game";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);

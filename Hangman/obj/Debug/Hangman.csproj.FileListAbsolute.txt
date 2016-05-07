@@ -12,3 +12,4 @@ C:\Users\Marina\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.pdb
 C:\Users\Filip Stanojkovski\Desktop\HangMan-VP1\Hangman\bin\Debug\Hangman.exe.config
 C:\Users\Filip Stanojkovski\Desktop\HangMan-VP1\Hangman\obj\Debug\Hangman.exe
 C:\Users\Filip Stanojkovski\Desktop\HangMan-VP1\Hangman\obj\Debug\Hangman.pdb
+C:\Users\Marina\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.csprojResolveAssemblyReference.cache

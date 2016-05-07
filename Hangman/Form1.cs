@@ -90,7 +90,6 @@ namespace Hangman
             Igraj play = new Igraj(text);
             play.Show();        
             this.Hide();
-           
 
         }
       
@@ -132,6 +131,15 @@ namespace Hangman
                 my_sound.Play();
                 sound = true;
             }
+        }
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

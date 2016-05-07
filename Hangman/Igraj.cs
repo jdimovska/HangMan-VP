@@ -23,6 +23,7 @@ namespace Hangman
         string st = "";
         char[] orginal;
         char[] crticki;
+        public int timeLeft;
         public Igraj(string category)
         {
             InitializeComponent();
@@ -30,8 +31,18 @@ namespace Hangman
             this.category = category;
             s = "";
             temp = "";
+            if(numericUpDown1.Value==5)
+                 timeLeft = 60;
+            if (numericUpDown1.Value == 6)
+                timeLeft = 70;
+            if (numericUpDown1.Value == 7)
+                timeLeft = 80;
+            if (numericUpDown1.Value == 8)
+                timeLeft = 90;
+            if (numericUpDown1.Value == 9)
+                timeLeft = 100;
         }
-
+        
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
@@ -44,7 +55,7 @@ namespace Hangman
 
         private void Igraj_Load(object sender, EventArgs e)
         {
-
+            timer1.Stop();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -104,6 +115,7 @@ namespace Hangman
             button4.Enabled = false;
             char pom = Convert.ToChar(button4.Text);
             vpisiBukva(pom);
+           
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -111,6 +123,7 @@ namespace Hangman
             button5.Enabled = false;
             char pom = Convert.ToChar(button5.Text);
             vpisiBukva(pom);
+            
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -118,6 +131,7 @@ namespace Hangman
             button6.Enabled = false;
             char pom = Convert.ToChar(button6.Text);
             vpisiBukva(pom);
+            
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -125,6 +139,7 @@ namespace Hangman
             button7.Enabled = false;
             char pom = Convert.ToChar(button7.Text);
             vpisiBukva(pom);
+            
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -132,6 +147,7 @@ namespace Hangman
             button8.Enabled = false;
             char pom = Convert.ToChar(button8.Text);
             vpisiBukva(pom);
+            
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -270,6 +286,8 @@ namespace Hangman
             temp = data.getWord((int)numericUpDown1.Value);
             orginal = temp.ToCharArray();
             crticki = s.ToCharArray();
+            timer1.Enabled = true;
+            timer1.Start();
           
         }
       
@@ -285,10 +303,8 @@ namespace Hangman
                     trueLetters++;
                    scorePlayer += 10;
                     flag = true;
-                    
-                   
+
                 }
-                
 
                 if (trueLetters == (int)numericUpDown1.Value) {
 
@@ -297,8 +313,6 @@ namespace Hangman
                     break;
 
                 }
-                
-                
 
             }
             if (!flag)
@@ -333,9 +347,11 @@ namespace Hangman
             {
                 pictureBox7.Visible = false;
                 pictureBox8.Visible = true;
+                this.Hide();
                 GameOver gm = new GameOver();
                 gm.Show();
-                this.Close();
+                timer1.Stop();
+                timer1.Dispose();     
 
             }
 
@@ -354,8 +370,6 @@ namespace Hangman
         private void button27_Click_1(object sender, EventArgs e)
         {
             s = "";
-           
-            
             char same =' ';
             Boolean done = false;
             char []pom = temp.ToCharArray();
@@ -392,9 +406,8 @@ namespace Hangman
 
                 HighScore score = new HighScore(scorePlayer);
                 score.Show();
-                this.Close();
-                
-
+                this.Hide();
+    
             }
             button27.Enabled = false;
 
@@ -433,6 +446,45 @@ namespace Hangman
         private void pictureBox9_Click(object sender, EventArgs e)
         {
             
+        }
+        public void OnBackToMainClicked(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Igraj_FormClosed(object sender, FormClosedEventArgs e)
+        {
+           Application.Exit();
+        }
+
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (timeLeft > 0)
+            {
+               
+                timeLeft = timeLeft - 1;
+                label5.Text = timeLeft + " seconds";
+            }
+            else
+            {
+                
+                timer1.Stop();
+                MessageBox.Show("You didn't finish in time.", "Sorry!");
+                GameOver gm = new GameOver();
+                this.Hide();
+                gm.Show();
+            }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Igraj_FormClosing(object sender, FormClosingEventArgs e)
+        {
+           
         }
     }
 }

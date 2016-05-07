@@ -36,5 +36,10 @@ namespace Hangman
             Application.Exit();
             
         }
+
+        private void GameOver_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
