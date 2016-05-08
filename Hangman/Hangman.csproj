@@ -54,6 +54,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="HighScore Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HighScore Form.Designer.cs">
+      <DependentUpon>HighScore Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="GameOver.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GameOver.resx">
       <DependentUpon>GameOver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HighScore Form.resx">
+      <DependentUpon>HighScore Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HighScore.resx">
       <DependentUpon>HighScore.cs</DependentUpon>

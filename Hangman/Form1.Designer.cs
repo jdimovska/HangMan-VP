@@ -70,6 +70,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "High scores";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // pictureBox1
             // 
@@ -96,7 +97,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(249, 184);
+            this.button5.Location = new System.Drawing.Point(249, 185);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(121, 35);
             this.button5.TabIndex = 5;
@@ -107,7 +108,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(249, 226);
+            this.button6.Location = new System.Drawing.Point(330, 225);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(121, 35);
             this.button6.TabIndex = 6;
@@ -122,7 +123,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Snow;
-            this.label2.Location = new System.Drawing.Point(16, 124);
+            this.label2.Location = new System.Drawing.Point(12, 305);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(603, 192);
             this.label2.TabIndex = 9;

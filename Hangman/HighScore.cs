@@ -13,6 +13,7 @@ namespace Hangman
 {
     public partial class HighScore : Form
     {
+        List<Tuple<String, int>> hs = new List<Tuple<string, int>>();
         public int score;
         public HighScore(int score)
         {
@@ -35,8 +36,9 @@ namespace Hangman
                 en.DecryptFile(outp, decr);
                 File.Delete(outp);
                 StreamWriter wr = new StreamWriter(decr, true);
-                wr.WriteLine(textBox1.Text);
-                wr.WriteLine(textBox2.Text);
+                //wr.WriteLine(textBox1.Text);
+                //wr.WriteLine(textBox2.Text);
+                wr.WriteLine(textBox1.Text + ' ' + textBox2.Text);
                 wr.Flush();
                 wr.Close();
                 en.EncryptFile(decr, outp);
@@ -46,9 +48,29 @@ namespace Hangman
             {
                 en.DecryptFile(outp, decr);
                 File.Delete(outp);
+                
+                hs.Add(new Tuple<String,int>(textBox1.Text, int.Parse(textBox2.Text)));
+                StreamReader read = new StreamReader(decr);
+                String line;
+                while((line=read.ReadLine())!=null)
+                {
+                    var d = line.Split(' ');
+                    String name = d[0];
+                    int scr = int.Parse(d[1]);
+                    hs.Add(new Tuple<String, int>(name, scr));
+                }
+                read.Close();
+                hs.Sort((x, y) => y.Item2.CompareTo(x.Item2));
+                File.Delete(decr);
+                File.Create(decr).Close();
                 StreamWriter wr = new StreamWriter(decr, true);
-                wr.WriteLine(textBox1.Text);
-                wr.WriteLine(textBox2.Text);
+                for (int j=0;j<hs.Count;j++)
+                {
+                    wr.WriteLine(hs[j].Item1 + ' ' + hs[j].Item2);
+                }
+                //wr.WriteLine(textBox1.Text);
+                //wr.WriteLine(textBox2.Text);
+                //wr.WriteLine(textBox1.Text + ' ' + textBox2.Text);
                 wr.Flush();
                 wr.Close();
                 en.EncryptFile(decr, outp);

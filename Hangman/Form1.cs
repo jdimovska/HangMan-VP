@@ -141,5 +141,11 @@ namespace Hangman
         {
             Application.Exit();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form2 hs = new Form2();
+            hs.Show();
+        }
     }
 }

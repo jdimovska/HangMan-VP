@@ -258,16 +258,22 @@ namespace Hangman
         private void button24_Click(object sender, EventArgs e)
         {
             button24.Enabled = false;
+            char pom = Convert.ToChar(button24.Text);
+            vpisiBukva(pom);
         }
 
         private void button25_Click(object sender, EventArgs e)
         {
             button25.Enabled = false;
+            char pom = Convert.ToChar(button25.Text);
+            vpisiBukva(pom);
         }
 
         private void button26_Click(object sender, EventArgs e)
         {
             button26.Enabled = false;
+            char pom = Convert.ToChar(button26.Text);
+            vpisiBukva(pom);
         }
 
         private void button29_Click(object sender, EventArgs e)
@@ -301,14 +307,15 @@ namespace Hangman
                 {
                     crticki[i] = c;
                     trueLetters++;
-                   scorePlayer += 10;
+                    scorePlayer += 10;
                     flag = true;
 
                 }
 
                 if (trueLetters == (int)numericUpDown1.Value) {
 
-                    HighScore score = new HighScore(scorePlayer);
+                    HighScore score = new HighScore(scorePlayer*timeLeft);
+                    timer1.Stop();
                     score.Show();
                     break;
 
@@ -404,7 +411,8 @@ namespace Hangman
             if (trueLetters == (int)numericUpDown1.Value)
             {
 
-                HighScore score = new HighScore(scorePlayer);
+                HighScore score = new HighScore(scorePlayer*timeLeft);
+                timer1.Stop();
                 score.Show();
                 this.Hide();
     
