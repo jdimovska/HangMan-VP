@@ -38,3 +38,16 @@ C:\Users\Filip Stanojkovski\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.Igraj.r
 C:\Users\Filip Stanojkovski\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.Properties.Resources.resources
 C:\Users\Filip Stanojkovski\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.csproj.GenerateResource.Cache
 C:\Users\Filip Stanojkovski\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.Form2.resources
+C:\Users\Jona Dimovska\Desktop\HangMan-VP\Hangman\bin\Debug\Hangman.exe.config
+C:\Users\Jona Dimovska\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.exe
+C:\Users\Jona Dimovska\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.pdb
+C:\Users\Jona Dimovska\Desktop\HangMan-VP\Hangman\bin\Debug\Hangman.exe
+C:\Users\Jona Dimovska\Desktop\HangMan-VP\Hangman\bin\Debug\Hangman.pdb
+C:\Users\Jona Dimovska\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.csprojResolveAssemblyReference.cache
+C:\Users\Jona Dimovska\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.Form1.resources
+C:\Users\Jona Dimovska\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.GameOver.resources
+C:\Users\Jona Dimovska\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.Form2.resources
+C:\Users\Jona Dimovska\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.HighScore.resources
+C:\Users\Jona Dimovska\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.Igraj.resources
+C:\Users\Jona Dimovska\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.Properties.Resources.resources
+C:\Users\Jona Dimovska\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.csproj.GenerateResource.Cache
