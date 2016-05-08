@@ -317,7 +317,8 @@ namespace Hangman
                     HighScore score = new HighScore(scorePlayer*timeLeft);
                     timer1.Stop();
                     score.Show();
-                    break;
+                    //break;
+                    this.Hide();
 
                 }
 
