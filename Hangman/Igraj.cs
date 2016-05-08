@@ -31,16 +31,7 @@ namespace Hangman
             this.category = category;
             s = "";
             temp = "";
-            if(numericUpDown1.Value==5)
-                 timeLeft = 60;
-            if (numericUpDown1.Value == 6)
-                timeLeft = 70;
-            if (numericUpDown1.Value == 7)
-                timeLeft = 80;
-            if (numericUpDown1.Value == 8)
-                timeLeft = 90;
-            if (numericUpDown1.Value == 9)
-                timeLeft = 100;
+            timeLeft = 0;
         }
         
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -81,7 +72,16 @@ namespace Hangman
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-
+            if ((int)numericUpDown1.Value == 5)
+                timeLeft = 60;
+            if ((int)numericUpDown1.Value == 6)
+                timeLeft = 70;
+            if (numericUpDown1.Value == 7)
+                timeLeft = 80;
+            if (numericUpDown1.Value == 8)
+                timeLeft = 90;
+            if (numericUpDown1.Value == 9)
+                timeLeft = 100;
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

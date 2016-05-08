@@ -24,8 +24,8 @@ namespace Hangman
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            Close();
+
+            this.Hide();
             Form1 tmp = new Form1();
             tmp.Show();
         }
@@ -40,6 +40,16 @@ namespace Hangman
         private void GameOver_Load(object sender, EventArgs e)
         {
 
+        }
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Exit();
+        }
+
+        private void GameOver_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

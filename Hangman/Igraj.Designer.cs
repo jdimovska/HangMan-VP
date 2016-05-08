@@ -595,7 +595,7 @@
             this.label5.Enabled = false;
             this.label5.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(84, 272);
+            this.label5.Location = new System.Drawing.Point(85, 272);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 18);
             this.label5.TabIndex = 44;
