@@ -327,9 +327,10 @@ namespace Hangman
                     HighScore score = new HighScore(scorePlayer*timeLeft);
                     timer1.Stop();
                     score.Show();
-                    //break;
+                    
                     this.Hide();
 
+                    break;
                 }
 
             }
@@ -428,6 +429,7 @@ namespace Hangman
                 timer1.Stop();
                 score.Show();
                 this.Hide();
+                
     
             }
             button27.Enabled = false;

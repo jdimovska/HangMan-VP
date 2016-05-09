@@ -23,3 +23,4 @@ C:\Users\Marina\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.HighScore.resources
 C:\Users\Marina\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.Igraj.resources
 C:\Users\Marina\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.Properties.Resources.resources
 C:\Users\Marina\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.csproj.GenerateResource.Cache
+C:\Users\Jona Dimovska\Desktop\HangMan-VP\Hangman\obj\Debug\Hangman.csprojResolveAssemblyReference.cache
