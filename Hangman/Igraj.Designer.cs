@@ -634,6 +634,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+<<<<<<< HEAD
             this.label5.BackColor = System.Drawing.Color.Firebrick;
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label5.Cursor = System.Windows.Forms.Cursors.Default;
@@ -644,6 +645,16 @@
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(2, 24);
+=======
+            this.label5.BackColor = System.Drawing.Color.DarkRed;
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label5.Enabled = false;
+            this.label5.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Snow;
+            this.label5.Location = new System.Drawing.Point(85, 272);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(2, 20);
+>>>>>>> ff981ca28f5bc7a6929258a9f33723b3278b5641
             this.label5.TabIndex = 44;
             this.label5.Visible = false;
             this.label5.Click += new System.EventHandler(this.label5_Click);
