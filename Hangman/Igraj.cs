@@ -31,7 +31,7 @@ namespace Hangman
             this.category = category;
             s = "";
             temp = "";
-            timeLeft = 0;
+            timeLeft = (int)numericUpDown1.Value*10;
         }
         
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
