@@ -44,6 +44,8 @@ namespace Hangman
             button5.Visible = true;
             button6.Visible = true;
             home = false;
+            pictureBox2.Visible = true;
+
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
@@ -57,6 +59,7 @@ namespace Hangman
                 button5.Visible = false;
                 button6.Visible = false;
                 label2.Visible = false;
+                pictureBox2.Visible = false;
             }
         }
 
@@ -67,7 +70,9 @@ namespace Hangman
             button3.Visible = false;
             label2.Visible = true;
             home = false;
-           
+            pictureBox2.Visible = true;
+
+
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
@@ -146,6 +151,26 @@ namespace Hangman
         {
             Form2 hs = new Form2();
             hs.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            if (!home)
+            {
+                button1.Visible = true;
+                button2.Visible = true;
+                button3.Visible = true;
+                button4.Visible = false;
+                button5.Visible = false;
+                button6.Visible = false;
+                label2.Visible = false;
+                pictureBox2.Visible = false;
+            }
         }
     }
 }

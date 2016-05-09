@@ -76,7 +76,7 @@ namespace Hangman
                 en.EncryptFile(decr, outp);
                 File.Delete(decr);
             }
-            this.Close();
+            this.Hide();
             Form1 home = new Form1();
             int i = 1;
             home.res(i);
