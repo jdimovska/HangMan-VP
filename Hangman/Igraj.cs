@@ -31,11 +31,11 @@ namespace Hangman
             this.category = category;
             s = "";
             temp = "";
-<<<<<<< HEAD
+
             timeLeft = (int)numericUpDown1.Value*10+10;
-=======
+
             timeLeft = 60;
->>>>>>> ff981ca28f5bc7a6929258a9f33723b3278b5641
+
         }
         
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -285,10 +285,10 @@ namespace Hangman
             button29.Enabled = false;
             numericUpDown1.Enabled = false;
             label5.Visible = true;
-<<<<<<< HEAD
-=======
+
+
             
->>>>>>> ff981ca28f5bc7a6929258a9f33723b3278b5641
+
             groupBox1.Enabled = true;
             int brojac = (int)numericUpDown1.Value;
             s = "";
