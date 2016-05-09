@@ -25,8 +25,8 @@ namespace Hangman
             String line;
             int c = 0;
             int i = 0;
-            Label[] labels = new Label[] { label2, label3, label4, label5, label6, label7, label8,label9,label10,label11};
-            while(c<5 && (line=read.ReadLine())!=null)
+            Label[] labels = new Label[] { label2, label3, label4, label5, label6, label7, label8, label9, label10, label11 };
+            while (c < 5 && (line = read.ReadLine()) != null)
             {
                 var d = line.Split(' ');
                 String name = d[0];
@@ -37,17 +37,26 @@ namespace Hangman
                 labels[i].Text = score;
                 i++;
                 c++;
-                
+
             }
             read.Close();
             en.EncryptFile(decr, outp);
             File.Delete(decr);
         }
-
+        public void OnBackToMainClicked(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        
         private void fsdf()
         {
             /*encDecr en = new encDecr();
             en.DecryptFile(outp,decr);*/
+        }
+
+        private void Form2_FormClosed(object sender, FormClosedEventArgs e)
+        {
+           
         }
     }
 }

@@ -12,9 +12,10 @@ namespace Hangman
 {
     public partial class GameOver : Form
     {
-        public GameOver()
+        public GameOver(string word)
         {
             InitializeComponent();
+            label4.Text = word;
         }
 
         private void label2_Click(object sender, EventArgs e)

@@ -31,7 +31,7 @@ namespace Hangman
             this.category = category;
             s = "";
             temp = "";
-            timeLeft = (int)numericUpDown1.Value*10;
+            timeLeft = (int)numericUpDown1.Value*10+10;
         }
         
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -278,7 +278,9 @@ namespace Hangman
 
         private void button29_Click(object sender, EventArgs e)
         {
-            
+            button29.Enabled = false;
+            numericUpDown1.Enabled = false;
+            label5.Visible = true;
             groupBox1.Enabled = true;
             int brojac = (int)numericUpDown1.Value;
             s = "";
@@ -356,14 +358,16 @@ namespace Hangman
                 pictureBox7.Visible = false;
                 pictureBox8.Visible = true;
                 this.Hide();
-                GameOver gm = new GameOver();
+                GameOver gm = new GameOver(temp);
                 gm.Show();
                 timer1.Stop();
-                timer1.Dispose();     
+                timer1.Dispose();
 
+                
             }
 
             s = "";
+            
             for (int j = 0; j < crticki.Length; j++)
             {
                 s += crticki[j];
@@ -480,7 +484,7 @@ namespace Hangman
                 
                 timer1.Stop();
                 MessageBox.Show("You didn't finish in time.", "Sorry!");
-                GameOver gm = new GameOver();
+                GameOver gm = new GameOver(temp);
                 this.Hide();
                 gm.Show();
             }
