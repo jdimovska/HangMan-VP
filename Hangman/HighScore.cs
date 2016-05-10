@@ -88,5 +88,27 @@ namespace Hangman
         {
             Application.Exit();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_Validating(object sender, CancelEventArgs e)
+        {
+            if(textBox1.Text.Contains(' '))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(textBox1, "Empty space is not allowed");
+            }
+            else if(textBox1.Text.Length==0)
+            {
+                textBox1.Text = "Unknown";
+            }
+            else
+            {
+                errorProvider1.SetError(textBox1, null);
+            }
+        }
     }
 }

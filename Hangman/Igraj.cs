@@ -51,6 +51,7 @@ namespace Hangman
         private void Igraj_Load(object sender, EventArgs e)
         {
             timer1.Stop();
+            this.KeyPreview = true;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -110,6 +111,7 @@ namespace Hangman
                 Form1 tmp = new Form1();
                 tmp.Show();
                 this.Hide();
+                timer1.Stop();
             }
             
         }
@@ -285,7 +287,7 @@ namespace Hangman
             button29.Enabled = false;
             numericUpDown1.Enabled = false;
             label5.Visible = true;
-
+            //button28.Enabled = true;
 
             
 
@@ -508,6 +510,135 @@ namespace Hangman
         private void Igraj_FormClosing(object sender, FormClosingEventArgs e)
         {
            
+        }
+
+        private void button28_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void Igraj_KeyDown(object sender, KeyEventArgs e)
+        {
+            /*if(e.KeyCode.ToString()=="A")
+            {
+                button1.PerformClick();
+            }*/
+        }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == (Keys.A))
+            {
+                button1.PerformClick();
+            }
+            if (keyData == (Keys.B))
+            {
+                button2.PerformClick();
+            }
+            if (keyData == (Keys.C))
+            {
+                button3.PerformClick();
+            }
+            if (keyData == (Keys.D))
+            {
+                button4.PerformClick();
+            }
+            if (keyData == (Keys.E))
+            {
+                button5.PerformClick();
+            }
+            if (keyData == (Keys.F))
+            {
+                button6.PerformClick();
+            }
+            if (keyData == (Keys.G))
+            {
+                button7.PerformClick();
+            }
+            if (keyData == (Keys.H))
+            {
+                button8.PerformClick();
+            }
+            if (keyData == (Keys.I))
+            {
+                button9.PerformClick();
+            }
+            if (keyData == (Keys.J))
+            {
+                button10.PerformClick();
+            }
+            if (keyData == (Keys.K))
+            {
+                button11.PerformClick();
+            }
+            if (keyData == (Keys.L))
+            {
+                button12.PerformClick();
+            }
+            if (keyData == (Keys.M))
+            {
+                button13.PerformClick();
+            }
+            if (keyData == (Keys.N))
+            {
+                button15.PerformClick();
+            }
+            if (keyData == (Keys.O))
+            {
+                button14.PerformClick();
+            }
+            if (keyData == (Keys.P))
+            {
+                button16.PerformClick();
+            }
+            if (keyData == (Keys.Q))
+            {
+                button17.PerformClick();
+            }
+            if (keyData == (Keys.R))
+            {
+                button18.PerformClick();
+            }
+            if (keyData == (Keys.S))
+            {
+                button19.PerformClick();
+            }
+            if (keyData == (Keys.T))
+            {
+                button20.PerformClick();
+            }
+            if (keyData == (Keys.U))
+            {
+                button21.PerformClick();
+            }
+            if (keyData == (Keys.V))
+            {
+                button22.PerformClick();
+            }
+            if (keyData == (Keys.W))
+            {
+                button23.PerformClick();
+            }
+            if (keyData == (Keys.X))
+            {
+                button24.PerformClick();
+            }
+            if (keyData == (Keys.Y))
+            {
+                button25.PerformClick();
+            }
+            if (keyData == (Keys.Z))
+            {
+                button26.PerformClick();
+            }
+            if (keyData == (Keys.Escape))
+            {
+                button28.PerformClick();
+            }
+            /*if (keyData == (Keys.Enter))
+            {
+                button29.PerformClick();
+            }*/
+            return base.ProcessCmdKey(ref msg, keyData);
         }
     }
 }
