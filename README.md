@@ -1,4 +1,0 @@
-# HangMan-VP
-ReadMe
-
-asddfg
