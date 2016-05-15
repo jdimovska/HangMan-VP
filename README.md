@@ -1,11 +1,11 @@
-**Hangman (Бесилка)**
+﻿**Hangman (Бесилка)**
 -----------------
 
 ***Членови на тимот:***
 
  - Марина Ангеловска   141061	
  - Јона Димовска       141039
- - Филип Станојковски  145
+ - Филип Станојковски  141522
 
 **1. Опис на апликацијата**
 
@@ -26,17 +26,133 @@
  
 2)	Со одбирање на **Help** се отвара краток опис за правилата на игра. А со кликање на логото на играта или на стрелката се овозможува враќање назад кон Home page.
 
-3)	 Во делот за **High Score** се сортирани најдобрите 5 играчи заедно со нивните поени. Поените ги пресметувавме според формулата score= 10*погодена_буква. А со барање на Hint се одзимаат -10 поени. 
+3)	 Во делот за **High Scores** се сортирани најдобрите 5 играчи заедно со нивните поени. Поените ги пресметувавме според формулата score= 10*погодена_буква*преостанато_време. А со барање на Hint се одзимаат -10 поени. Копчето "Clear" ги брише сите "High Scores".
 
  ![HighScores](https://github.com/jdimovska/HangMan-VP/blob/master/Printscreens/3.png)
  
 
 **3. Опис на решението**
 
-Целата база од зборови ја чуваме во три ектриптирани датотеки (поделени според категоријата) со цел корисникот да не може да ја отвори и разгледува базата. При секоја игра и избор на должината на зборот се генерира рандом број и се зима зборот со тој реден број од соодветната категорија на зборови со таа должина. Со Hint копчето секогаш се дава првата непогодена буква од зборот и е дозволено само една употреба при една игра. Со погодување на буква се испишува наместо одредена долна црта на кое место таа буква се наоѓа, а со грешење на буква се генерира соодветна слика(секоја слика содржи еден дел од човечето повеќе).  
+Целата база од зборови ја чуваме во три енкриптирани датотеки (поделени според категоријата) со цел корисникот да не може да ја отвори и разгледува базата. При секоја игра и избор на должината на зборот се генерира рандом број и се зима зборот со тој реден број од соодветната категорија на зборови со таа должина. Со Hint копчето секогаш се дава првата непогодена буква од зборот и е дозволено само една употреба при една игра. Со погодување на буква се испишува наместо одредена долна црта на кое место таа буква се наоѓа, а со грешење на буква се генерира соодветна слика(секоја слика содржи еден дел од човечето повеќе).  
 
 *(Јона и Марина print screen од класата за зборовите и објаснување)* 
 
 Со впишување на High Score всушност се впишуваат поени и корисникот во одредена датотека за која што исто така е користена енкрипција и заштита. Постојано се сортираат најдобрите 5 играчи и нивните поени се прикажуваат.
 
 *(Фичо print screen од класата за high score и енкрипицја и објаснување)* 
+```c#
+ public partial class HighScore : Form
+    {
+        List<Tuple<String, int>> hs = new List<Tuple<string, int>>();
+        public int score;
+        public HighScore(int score)
+        {
+            this.score = score;
+            InitializeComponent();
+            textBox2.Text = Convert.ToString(score);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string outp = @"../../Resources/scorencr.txt";
+            string decr = @"../../Resources/scoredecr.txt";
+            encDecr en = new encDecr();
+            if (!File.Exists(outp))
+            {
+                File.Create(decr).Close();
+                StreamWriter wr = new StreamWriter(decr, true);
+                wr.WriteLine(textBox1.Text + ' ' + textBox2.Text);
+                wr.Flush();
+                wr.Close();
+                en.EncryptFile(decr, outp);
+                File.Delete(decr);
+            }
+            else
+            {
+                en.DecryptFile(outp, decr);
+                File.Delete(outp);
+                
+                hs.Add(new Tuple<String,int>(textBox1.Text, int.Parse(textBox2.Text)));
+                StreamReader read = new StreamReader(decr);
+                String line;
+                while((line=read.ReadLine())!=null)
+                {
+                    var d = line.Split(' ');
+                    String name = d[0];
+                    int scr = int.Parse(d[1]);
+                    hs.Add(new Tuple<String, int>(name, scr));
+                }
+                read.Close();
+                hs.Sort((x, y) => y.Item2.CompareTo(x.Item2));
+                File.Delete(decr);
+                File.Create(decr).Close();
+                StreamWriter wr = new StreamWriter(decr, true);
+                for (int j=0;j<hs.Count;j++)
+                {
+                    wr.WriteLine(hs[j].Item1 + ' ' + hs[j].Item2);
+                }
+                wr.Flush();
+                wr.Close();
+                en.EncryptFile(decr, outp);
+                File.Delete(decr);
+            }
+            this.Hide();
+            Form1 home = new Form1();
+            int i = 1;
+            home.res(i);
+           
+            
+        }
+```
+За да ги запишеме најдобрите резултати, користиме листа од туплес така што секое тупле има два предмети каде првиот е од типот "String", а вториот е од типот "int".
+```c#
+List<Tuple<String, int>> hs = new List<Tuple<string, int>>();
+```
+Кога внесуваме нов "High Score", 
+
+![EnterHighScore](https://github.com/jdimovska/HangMan-VP/blob/master/Printscreens/5.png)
+доколку не постојат претходни "High Scores", се креира нов текст документ во кој се запишува резултатот во формат "Име Резултат" и потоа се енкриптира.
+```c#
+if (!File.Exists(outp))
+{
+    File.Create(decr).Close();
+    StreamWriter wr = new StreamWriter(decr, true);
+    wr.WriteLine(textBox1.Text + ' ' + textBox2.Text);
+    wr.Flush();
+    wr.Close();
+    en.EncryptFile(decr, outp);
+    File.Delete(decr);
+}
+```
+Во спротива во листата се додава новиот резултат, се декриптира веќе постоечкиот документ со резултати и еден по еден ги додаваме во листата. Потоа го бришеме документот со резултати.
+```c#
+en.DecryptFile(outp, decr);
+File.Delete(outp);
+hs.Add(new Tuple<String,int>(textBox1.Text, int.Parse(textBox2.Text)));
+StreamReader read = new StreamReader(decr);
+String line;
+while((line=read.ReadLine())!=null)
+{
+    var d = line.Split(' ');
+    String name = d[0];
+    int scr = int.Parse(d[1]);
+    hs.Add(new Tuple<String, int>(name, scr));
+}
+```
+Резултатите се сортираат со "LINQ" по опаѓачки редослед,
+```c#
+hs.Sort((x, y) => y.Item2.CompareTo(x.Item2));
+```
+креираме нов празен документ во кој еден по еден ги запишуваме сортираните резултати и на крај го енкриптираме документот.
+```c#
+File.Create(decr).Close();
+StreamWriter wr = new StreamWriter(decr, true);
+for (int j=0;j<hs.Count;j++)
+{
+    wr.WriteLine(hs[j].Item1 + ' ' + hs[j].Item2);
+}
+wr.Flush();
+wr.Close();
+en.EncryptFile(decr, outp);
+File.Delete(decr);
+```
