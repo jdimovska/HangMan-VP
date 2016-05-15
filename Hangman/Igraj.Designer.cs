@@ -400,7 +400,7 @@
             // button27
             // 
             this.button27.Location = new System.Drawing.Point(229, 156);
-            this.button27.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button27.Margin = new System.Windows.Forms.Padding(2);
             this.button27.Name = "button27";
             this.button27.Size = new System.Drawing.Size(56, 26);
             this.button27.TabIndex = 36;
