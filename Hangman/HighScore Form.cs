@@ -20,6 +20,7 @@ namespace Hangman
             InitializeComponent();
             if (File.Exists(outp))
             {
+                button1.Enabled = true;
                 encDecr en = new encDecr();
                 en.DecryptFile(outp, decr);
                 File.Delete(outp);
@@ -56,6 +57,29 @@ namespace Hangman
         private void Form2_FormClosed(object sender, FormClosedEventArgs e)
         {
            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult res = MessageBox.Show("Are you sure you want to clear all the scores?",
+                "Clear High Scores",
+                MessageBoxButtons.YesNo);
+            if(res==DialogResult.Yes)
+            {
+                File.Delete(outp);
+                int c = 0;
+                int i = 0;
+                Label[] labels = new Label[] { label2, label3, label4, label5, label6, label7, label8, label9, label10, label11 };
+                while (c < 5)
+                {
+                    labels[i].Visible = false;
+                    i++;
+                    labels[i].Visible = false;
+                    i++;
+                    c++;
+                }
+                button1.Enabled = false;
+            }
         }
     }
 }
