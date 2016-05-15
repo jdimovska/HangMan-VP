@@ -33,7 +33,6 @@ namespace Hangman
                 {
                     var d = line.Split(' ');
                     String name = d[0];
-                    //int score = int.Parse(d[1]);
                     String score = d[1];
                     labels[i].Text = name;
                     labels[i].Visible = true;

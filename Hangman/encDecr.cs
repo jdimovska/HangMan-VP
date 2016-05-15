@@ -13,45 +13,12 @@ namespace Hangman
     public class encDecr
     {
         public object MessageBox { get; private set; }
-        /*public static string inp = @"../../Resources/score.txt";
-        public static string outp = @"../../Resources/scorencr.txt";
-        public static string decr = @"../../Resources/scoredecr.txt";*/
-
-        /*static void Main(string[] args)
-        {
-            if (!File.Exists(inp) && !File.Exists(outp))
-            {
-                File.Create(inp).Close();
-                EncryptFile(inp, outp);
-                File.Delete(inp);
-                DecryptFile(outp, decr);
-                File.Delete(outp);
-                StreamWriter wr = new StreamWriter(decr, true);
-                wr.WriteLine("Filip    1234");
-                wr.Flush();
-                wr.Close();
-                EncryptFile(decr, outp);
-                File.Delete(decr);
-            }
-            else
-            {
-                DecryptFile(outp, decr);
-                File.Delete(outp);
-                StreamWriter wr = new StreamWriter(decr, true);
-                wr.WriteLine("Jona    1234");
-                wr.Flush();
-                wr.Close();
-                EncryptFile(decr, outp);
-                File.Delete(decr);
-            }
-        }*/
-
         public void EncryptFile(string inputFile, string outputFile)
         {
 
             try
             {
-                string password = @"vProCks7"; // Your Key Here
+                string password = @"vProCks7";
                 UnicodeEncoding UE = new UnicodeEncoding();
                 byte[] key = UE.GetBytes(password);
 
@@ -86,7 +53,7 @@ namespace Hangman
         {
 
             {
-                string password = @"vProCks7"; // Your Key Here
+                string password = @"vProCks7";
 
                 UnicodeEncoding UE = new UnicodeEncoding();
                 byte[] key = UE.GetBytes(password);

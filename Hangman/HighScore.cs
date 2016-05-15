@@ -24,20 +24,13 @@ namespace Hangman
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //string inp = @"../../Resources/score.txt";
             string outp = @"../../Resources/scorencr.txt";
             string decr = @"../../Resources/scoredecr.txt";
             encDecr en = new encDecr();
             if (!File.Exists(outp))
             {
                 File.Create(decr).Close();
-                //en.EncryptFile(inp, outp);
-                //File.Delete(inp);
-                //en.DecryptFile(outp, decr);
-                //File.Delete(outp);
                 StreamWriter wr = new StreamWriter(decr, true);
-                //wr.WriteLine(textBox1.Text);
-                //wr.WriteLine(textBox2.Text);
                 wr.WriteLine(textBox1.Text + ' ' + textBox2.Text);
                 wr.Flush();
                 wr.Close();
@@ -68,9 +61,6 @@ namespace Hangman
                 {
                     wr.WriteLine(hs[j].Item1 + ' ' + hs[j].Item2);
                 }
-                //wr.WriteLine(textBox1.Text);
-                //wr.WriteLine(textBox2.Text);
-                //wr.WriteLine(textBox1.Text + ' ' + textBox2.Text);
                 wr.Flush();
                 wr.Close();
                 en.EncryptFile(decr, outp);
